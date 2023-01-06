@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors({
-  origin: "http://localhost:3001"
+  origin: "https://preeminent-frangipane-88b7b3.netlify.app"
 }))
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

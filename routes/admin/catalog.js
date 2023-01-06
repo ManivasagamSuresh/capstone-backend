@@ -145,7 +145,7 @@ router.post('/products/filter/model',async function(req, res, next) {
   try {
     const connection =await mongoclient.connect();
     const db  = connection.db("itemcatalog");
-    const products = await db.collection("shoes").find({category:`${req.body.Mnodel}` }).toArray();
+    const products = await db.collection("shoes").find({category:`${req.body.Model}` }).toArray();
     await connection.close();
   res.json(products);
   } catch (error) {
